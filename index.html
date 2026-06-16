@@ -112,19 +112,146 @@ h2.sec-title{
 .benefit-card p{font-size:13px;color:#666;margin:0}
 
 /* ── TESTIMONIALS ── */
-.sec-testi{background:#fffdf5;text-align:center}
+.sec-testi{background:#1a5c27;text-align:center;padding:72px 24px}
+.testi-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,38px);font-weight:700;color:#fff;margin-bottom:48px}
 .rating-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
 .stars-big{color:#f5c518;font-size:22px;letter-spacing:2px}
-.rating-number{font-size:28px;font-weight:800;color:#1a3320}
-.rating-label{font-size:13px;color:#777}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px}
-.testi-card{background:#fff;border-radius:16px;padding:24px 20px;text-align:left;box-shadow:0 2px 16px rgba(0,0,0,.07)}
-.testi-stars{color:#f5c518;font-size:14px;margin-bottom:10px}
-.testi-text{font-size:14px;color:#444;font-style:italic;margin-bottom:14px;line-height:1.55}
-.testi-name{font-size:13px;font-weight:700;color:#2d6a38}
-.social-heading{font-size:16px;font-weight:700;color:#1a3320;margin-bottom:20px}
-.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:720px;margin:0 auto}
-.social-grid img{width:100%;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.10);object-fit:cover}
+.rating-number{font-size:28px;font-weight:800;color:#fff}
+.rating-label{font-size:13px;color:rgba(255,255,255,.7)}
+
+/* cards WhatsApp */
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:1040px;
+  margin:0 auto;
+}
+.wa-card{
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,.25);
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+}
+/* Header do WhatsApp */
+.wa-header{
+  background:#1a5c27;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.wa-back{color:#fff;font-size:18px;line-height:1}
+.wa-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:#ccc;overflow:hidden;flex-shrink:0;
+}
+.wa-avatar img{width:100%;height:100%;object-fit:cover}
+.wa-info{flex:1}
+.wa-name{font-size:13px;font-weight:700;color:#fff;line-height:1.2}
+.wa-status{font-size:11px;color:rgba(255,255,255,.75)}
+.wa-icons{display:flex;gap:16px}
+.wa-icons span{color:#fff;font-size:15px}
+/* Body do WhatsApp */
+.wa-body{
+  background:#f0ece4;
+  padding:12px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.wa-date{
+  text-align:center;
+  font-size:11px;
+  color:#888;
+  background:rgba(255,255,255,.7);
+  border-radius:100px;
+  padding:3px 12px;
+  display:inline-block;
+  margin:0 auto;
+}
+.wa-img{
+  width:100%;
+  border-radius:8px;
+  overflow:hidden;
+  background:#ddd;
+}
+.wa-img img{
+  width:100%;
+  max-height:220px;
+  object-fit:cover;
+  display:block;
+}
+.wa-msg-received{
+  background:#fff;
+  border-radius:0 8px 8px 8px;
+  padding:8px 10px 20px;
+  font-size:12px;
+  color:#111;
+  line-height:1.5;
+  position:relative;
+  max-width:92%;
+}
+.wa-msg-received::before{
+  content:'';
+  position:absolute;
+  top:0;left:-6px;
+  border:6px solid transparent;
+  border-right-color:#fff;
+  border-top-color:#fff;
+}
+.wa-time-r{
+  position:absolute;
+  bottom:4px;right:8px;
+  font-size:10px;color:#999;
+}
+.wa-msg-sent{
+  background:#d9fdd3;
+  border-radius:8px 0 8px 8px;
+  padding:8px 10px 20px;
+  font-size:12px;
+  color:#111;
+  line-height:1.5;
+  position:relative;
+  max-width:92%;
+  align-self:flex-end;
+  margin-left:auto;
+}
+.wa-msg-sent::before{
+  content:'';
+  position:absolute;
+  top:0;right:-6px;
+  border:6px solid transparent;
+  border-left-color:#d9fdd3;
+  border-top-color:#d9fdd3;
+}
+.wa-time-s{
+  position:absolute;
+  bottom:4px;right:8px;
+  font-size:10px;color:#999;
+  display:flex;align-items:center;gap:2px;
+}
+.wa-time-s::after{content:'✓✓';color:#53bdeb;font-size:10px}
+/* Input bar */
+.wa-input-bar{
+  background:#f0ece4;
+  padding:8px 12px;
+  display:flex;align-items:center;gap:8px;
+  border-top:1px solid #ddd;
+}
+.wa-input-pill{
+  flex:1;background:#fff;border-radius:100px;
+  padding:8px 14px;font-size:12px;color:#999;
+}
+.wa-mic{
+  width:34px;height:34px;background:#1a5c27;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:14px;
+}
 
 /* ── HOW IT WORKS ── */
 .sec-how{background:#fff;text-align:center}
@@ -394,8 +521,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
 /* ── RESPONSIVE ── */
 @media(max-width:760px){
   .benefits-grid{grid-template-columns:1fr 1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .social-grid{grid-template-columns:1fr 1fr}
+  .social-grid{grid-template-columns:1fr}
   .steps-grid{grid-template-columns:1fr 1fr}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .bonus-grid{grid-template-columns:1fr 1fr}
@@ -509,38 +635,123 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
 </section>
 
 <!-- ═══ TESTIMONIALS ═══ -->
-<section class="sec sec-testi">
-  <div class="sec-inner" style="text-align:center">
-    <span class="eyebrow eyebrow-green">Provas e validação</span>
-    <h2 class="sec-title">Veja o que outras amantes de pets estão a dizer</h2>
-    <p class="sec-body" style="margin:0 auto 32px">Quem acede ao material percebe que criar peças fofas para pets pode ser muito mais simples quando existe um caminho organizado.</p>
-    <div class="rating-row">
-      <span class="stars-big">★★★★★</span>
-      <span class="rating-number">4.8/5</span>
-      <span class="rating-label">Material aprovado por quem ama pets e crochê</span>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Sempre achei lindo crochê para pet, mas não sabia por onde começar. O guia ajudou-me a organizar as ideias e finalmente fiz a minha primeira peça."</p>
-        <div class="testi-name">Ana Paula</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Gostei porque não fica preso só numa época. Tem ideias para várias alturas do ano e isso ajuda muito quem quer fazer para vender."</p>
-        <div class="testi-name">Márcia Lopes</div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"As imagens e inspirações deram-me muita clareza. Já comecei a montar as primeiras peças para oferecer a amigas que têm pets."</p>
-        <div class="testi-name">Juliana Ferreira</div>
-      </div>
-    </div>
-    <p class="social-heading">Prints e reações</p>
+<section class="sec-testi">
+  <div class="sec-inner">
+    <h2 class="testi-title">Prints e reações</h2>
     <div class="social-grid">
-      <img src="/prova-social-1.png" alt="Prova social 1">
-      <img src="/prova-social-2.png" alt="Prova social 2">
-      <img src="/prova-social-3.png" alt="Prova social 3">
+
+      <!-- Card 1 — Juliana P. -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">←</span>
+          <div class="wa-avatar"><img src="https://ui-avatars.com/api/?name=J&background=a8c5a0&color=fff&size=36" alt=""></div>
+          <div class="wa-info">
+            <div class="wa-name">Juliana P. (crochê)</div>
+            <div class="wa-status">online</div>
+          </div>
+          <div class="wa-icons"><span>📹</span><span>📞</span><span>⋮</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-date">Hoje</div>
+          <div class="wa-img"><img src="/prova-social-1.png" alt="Capa de crochê da Juliana"></div>
+          <div class="wa-msg-received">
+            Olá, boa noite! 💕<br>
+            Olha só que gira ficou a capa que eu fiz com o teu esquema! 🥰<br>
+            O meu cãozinho adorou, super quentinha e muito bem explicada.<br>
+            Já cá estou a escolher o próximo modelo para fazer! 😍<br>
+            Muito obrigada pelo carinho e dedicação!<br>
+            Tu és demais! 👏🐾
+            <span class="wa-time-r">20:31</span>
+          </div>
+          <div class="wa-msg-sent">
+            Que coisa mais linda, Juliana! 💚<br>
+            Ficou impecável!<br>
+            Obrigada por partilhares, fizeste o meu dia!
+            <span class="wa-time-s">20:33 </span>
+          </div>
+        </div>
+        <div class="wa-input-bar">
+          <span style="font-size:18px">🙂</span>
+          <div class="wa-input-pill">Mensagem</div>
+          <span style="font-size:18px">📎</span>
+          <span style="font-size:18px">📷</span>
+          <div class="wa-mic">🎤</div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Patrícia Lima -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">←</span>
+          <div class="wa-avatar"><img src="https://ui-avatars.com/api/?name=P&background=a8c5a0&color=fff&size=36" alt=""></div>
+          <div class="wa-info">
+            <div class="wa-name">Patrícia Lima (crochê)</div>
+            <div class="wa-status">online</div>
+          </div>
+          <div class="wa-icons"><span>📹</span><span>📞</span><span>⋮</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-date">Hoje</div>
+          <div class="wa-img"><img src="/prova-social-2.png" alt="Roupinhas da Patrícia Lima"></div>
+          <div class="wa-msg-received">
+            Olá, está tudo bem?<br>
+            Quero partilhar convosco estas duas peças que acabei de fazer seguindo as vossas receitas! Uma é para o Natal 🎄, cheia de cor e festa 🎉❤️💚. A outra é mais sóbria, para usar noutras ocasiões do dia-a-dia. Elas adoraram e eu fiquei muito feliz com o resultado! Adoro o vosso talento! Um beijinho.
+            <span class="wa-time-r">11:23</span>
+          </div>
+          <div class="wa-msg-sent">
+            Sinto-me tão grata por ter aprendido com vocês. As vossas explicações são fantásticas! Muito obrigada! 😍
+            <span class="wa-time-s">11:24 </span>
+          </div>
+        </div>
+        <div class="wa-input-bar">
+          <span style="font-size:18px">🙂</span>
+          <div class="wa-input-pill">Mensagem</div>
+          <span style="font-size:18px">📎</span>
+          <span style="font-size:18px">📷</span>
+          <div class="wa-mic">🎤</div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Lúcia Helena -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <span class="wa-back">←</span>
+          <div class="wa-avatar"><img src="https://ui-avatars.com/api/?name=L&background=a8c5a0&color=fff&size=36" alt=""></div>
+          <div class="wa-info">
+            <div class="wa-name">Lúcia Helena (crochê)</div>
+            <div class="wa-status">online</div>
+          </div>
+          <div class="wa-icons"><span>📹</span><span>📞</span><span>⋮</span></div>
+        </div>
+        <div class="wa-body">
+          <div class="wa-date">Hoje</div>
+          <div class="wa-img"><img src="/prova-social-3.png" alt="Gorrinhos da Lúcia Helena"></div>
+          <div class="wa-msg-received">
+            Olá, boa tarde! Tudo bem? 🥰<br>
+            Passei por cá para partilhar os gorrinhos que fiz seguindo o teu esquema.<br>
+            Fiz um para o meu Snoopy e outro para a Lili da minha filha. Ficaram um mimo! 💛🐾<br>
+            Toda a gente aqui em casa adorou!<br>
+            Já tive até vizinhas a perguntar se eu os faço para vender, e uma amiga já me quer encomendar um. 🙈<br>
+            Obrigada por ensinares tão bem! Os teus esquemas são incríveis e fazem sucesso por cá! 👏✨
+            <span class="wa-time-r">16:47</span>
+          </div>
+          <div class="wa-msg-sent">
+            Que coisa mais linda, Lúcia! 😍💚<br>
+            Ficaram perfeitos!<br>
+            Que bom que estão a fazer tanto sucesso!<br>
+            Obrigada por partilhares, fiquei muito feliz! 🥰
+            <span class="wa-time-s">16:50 </span>
+          </div>
+        </div>
+        <div class="wa-input-bar">
+          <span style="font-size:18px">🙂</span>
+          <div class="wa-input-pill">Mensagem</div>
+          <span style="font-size:18px">📎</span>
+          <span style="font-size:18px">📷</span>
+          <div class="wa-mic">🎤</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
