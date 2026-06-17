@@ -98,6 +98,7 @@ h2.sec-title{
   display:flex;align-items:center;gap:10px;
 }
 .feat-card.highlight{background:#2d6a38;color:#fff;border-color:#2d6a38}
+.feat-card.highlight .feat-icon{color:#cc0000}
 .feat-icon{font-size:18px;flex-shrink:0}
 
 /* ── BENEFITS ── */
@@ -400,6 +401,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
   .sticky-bar{flex-direction:column;gap:8px;text-align:center}
   .anchor-row{padding:14px 20px}
   .anchor-total-row{padding:16px 20px}
+  .features-grid{grid-template-columns:1fr}
 }
 @media(max-width:520px){
   .benefits-grid{grid-template-columns:1fr}
@@ -407,6 +409,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
   .bonus-grid{grid-template-columns:1fr}
   .social-grid{grid-template-columns:1fr}
   .steps-grid{grid-template-columns:1fr 1fr}
+  .features-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -476,7 +479,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
       <div class="feat-card"><span class="feat-icon">🧶</span> Acessórios personalizados</div>
       <div class="feat-card"><span class="feat-icon">📷</span> Modelos para fotos</div>
       <div class="feat-card"><span class="feat-icon">🎁</span> Datas comemorativas</div>
-      <div class="feat-card highlight"><span class="feat-icon">⭐</span> Coleção Especial Portugal</div>
+      <div class="feat-card highlight"><span class="feat-icon" style="color:#cc0000;filter:none">★</span> Coleção Especial Portugal</div>
       <div class="feat-card"><span class="feat-icon">🛍️</span> Ideias para vender</div>
     </div>
   </div>
