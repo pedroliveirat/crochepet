@@ -368,11 +368,10 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
 /* ── STICKY BAR ── */
 .sticky-bar{
   position:fixed;bottom:0;left:0;right:0;background:#1a3320;color:#fff;
-  padding:14px 24px;display:flex;align-items:center;justify-content:space-between;
-  gap:16px;z-index:900;box-shadow:0 -4px 24px rgba(0,0,0,.25);
+  padding:14px 24px;display:flex;align-items:center;justify-content:center;
+  z-index:900;box-shadow:0 -4px 24px rgba(0,0,0,.25);
 }
-.sticky-bar-text{font-size:14px;font-weight:600}
-.sticky-bar .btn-cta{padding:12px 28px;font-size:14px;box-shadow:none}
+.sticky-bar .btn-cta{padding:12px 36px;font-size:15px;box-shadow:none}
 
 /* ── MODAL ── */
 .modal-overlay{
@@ -685,7 +684,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
 </section>
 
 <!-- ═══ ANCHOR PRICE — idêntico ao original ═══ -->
-<section class="sec-anchor">
+<section class="sec-anchor" id="precos">
   <h2 class="anchor-title">Se fosse comprar tudo separado,<br>pagaria muito mais</h2>
 
   <div class="anchor-card">
@@ -840,8 +839,7 @@ footer{background:#1a3320;color:rgba(255,255,255,.55);text-align:center;padding:
 
 <!-- STICKY BAR -->
 <div class="sticky-bar">
-  <span class="sticky-bar-text">🐾 Acesso imediato a partir de 5,90€</span>
-  <button class="btn-cta" onclick="openModal()">Ver ofertas a partir de 5,90€</button>
+  <button class="btn-cta" onclick="document.getElementById('precos').scrollIntoView({behavior:'smooth'})">Ver ofertas a partir de 5,90€</button>
 </div>
 
 <!-- ═══ MODAL ═══ -->
